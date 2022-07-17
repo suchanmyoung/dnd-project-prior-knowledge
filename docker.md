@@ -146,3 +146,29 @@ CMD [ "executable" ]
     * -./:/usr/src/app 
   * command: ["npm", "run", "test"]
 ![img_1.png](img_1.png)
+
+### Travis.yml
+* sudo: required
+* language: generic
+* services:
+  * -docker
+* before_install:
+  * -echo "start dockerfile"
+  * -docker build -t [이미지명] -f dockerfile.dev .
+* script
+  * -docker run -e CI=true [이미지명] npm run test -- --coverage
+* deploy:
+  * provider: elasticbeanstalk
+  * region: "ap-northeast-2"
+  * app: "docker-react-app"
+  * env: "DockerReactApp-env"
+  * bucket_name: "elasticbeanstalk-ap-northeast-2-972133"
+  * bucket_path: "docker-react-app"
+  * on:
+    * branch: master
+### CI 도구가 AWS에 접근하려면
+* IAM 생성
+* 어떤 작업이든 Root 사용자를 사용하는 것은 보안을 위해 좋지 않음
+* 프로그래밍 방식 액세스
+* ElasticBeanstalk Full Access 권한
+* 액세스 키(API Key)는 yml 파일에 직접 적으면 노출 되기 때문에 다른 곳에 적어줘야 함
