@@ -172,3 +172,8 @@ CMD [ "executable" ]
 * 프로그래밍 방식 액세스
 * ElasticBeanstalk Full Access 권한
 * 액세스 키(API Key)는 yml 파일에 직접 적으면 노출 되기 때문에 다른 곳에 적어줘야 함
+* ![](../../../../../var/folders/5l/sqd4fvl55bzbx3ctg58lt66m0000gn/T/TemporaryItems/NSIRD_screencaptureui_AR0DHJ/스크린샷 2022-07-17 오후 3.49.26.png)
+
+![](../../../../../var/folders/5l/sqd4fvl55bzbx3ctg58lt66m0000gn/T/TemporaryItems/NSIRD_screencaptureui_avEMjF/스크린샷 2022-07-17 오후 3.55.23.png)
+
+![](../../../../../var/folders/5l/sqd4fvl55bzbx3ctg58lt66m0000gn/T/TemporaryItems/NSIRD_screencaptureui_wpkoR3/스크린샷 2022-07-17 오후 3.55.34.png)
